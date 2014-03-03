@@ -1,0 +1,65 @@
+/* tabs */
+.jisue-selected-tab {
+    border-width : 1px 1px 0px 1px;
+    background-color : #82a7c1;
+}
+.jisue-tab {
+    border-width : 2px 1px 1px 1px;
+}
+.jisue-tab:hover {
+    background-color : #eee;
+    border-top : 2px #999 solid;
+}
+.jisue-tab A:hover, .jisue-selected-tab A:hover {
+    text-decoration : none !important;
+}
+.jisue-tab-spacer, .jisue-tab-spring {
+    border-width : 0px 0px 1px 0px;
+}
+.jisue-tab-bar {
+    background-color : #edf0f5;
+    border-width : 0px 1px 1px 1px;
+}
+.jisue-selected-tab, .jisue-tab, .jisue-tab-spacer, .jisue-tab-spring, .jisue-tab-bar
+{
+    border-color : #bbb;
+    border-style : solid;
+}
+.jisue-tab, .jisue-selected-tab {
+    padding : 4px 10px 4px 10px;
+}
+.jisue-selected-tab A {
+    color : #fff !important;
+    text-decoration : none;
+    font-weight : bold;
+}
+.jisue-tab A {
+    color : #333 !important;
+    text-decoration : none;
+    font-weight : bold;
+}
+.jisue-tab A:hover, .jisue-selected-tab A:hover {
+    text-decoration : underline;
+}
+.jisue-tab {
+    background-color : #ddd;
+}
+.jisue-tab-bar TD {
+
+}
+.jisue-tab-bar A {
+}
+.jisue-tab-bar A:hover {
+}
+.jisue-tab-section TD {
+
+
+}
+.jisue-tab-section A {
+    color : #333 !important;
+    padding-right : 6px;
+}
+.jisue-tab-spring {
+
+}
+

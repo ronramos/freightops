@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>escape</short-name>
+	<uri>http://www.jisuesoft.com/taglibs/tracker</uri>
+	<display-name>Tracker Taglib</display-name>
+	<description>Tracker Taglib</description>
+
+	<tag>
+		<name>escape</name>
+		<tag-class>com.jisuesoft.tracker.web.taglib.EscapeTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>A tag to escape contents</description>
+		<attribute>
+			<name>startTag</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>stopTag</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+	</tag>
+
+    <tag>
+        <name>user</name>
+        <tag-class>com.jisuesoft.tracker.web.taglib.ViewUserTag</tag-class>
+        <body-content>JSP</body-content>
+        <description>A tag to view user</description>
+    </tag>
+
+    <tag>
+        <name>message</name>
+        <tag-class>com.jisuesoft.tracker.web.taglib.MessageTag</tag-class>
+        <body-content>JSP</body-content>
+        <description>A tag to display localization string</description>
+        <attribute>
+            <name>boundle</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>prefix</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>silent</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+	<tag>
+		<name>permission</name>
+		<tag-class>com.jisuesoft.tracker.web.taglib.PermissionTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>A tag to check permission</description>
+		<attribute>
+			<name>type</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>project</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>filesize</name>
+		<tag-class>com.jisuesoft.tracker.web.taglib.FileSizeTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>A tag to format file size</description>
+	</tag>
+
+	<tag>
+		<name>contentType</name>
+		<tag-class>com.jisuesoft.tracker.web.taglib.ContentTypeTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>A tag to format file size</description>
+		<attribute>
+			<name>baseUrl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>truncate</name>
+		<tag-class>com.jisuesoft.tracker.web.taglib.TruncateTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>var</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>lower</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>upper</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>appendToEnd</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>startTag</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>stopTag</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+	</tag>
+
+</taglib>

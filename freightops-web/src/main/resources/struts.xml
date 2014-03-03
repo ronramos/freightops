@@ -1,0 +1,60 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<!-- constant name="struts.ui.theme" value="ernestTheme" /> <constant name="struts.ui.templateDir" 
+		value="template" /> -->
+	<package name="default" extends="struts-default" namespace="/">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<interceptors>
+			<interceptor name="authentication"
+				class="com.sr.freightops.web.interceptors.AuthenticationInterceptor" />
+			<interceptor-stack name="authStack">
+				<interceptor-ref name="authentication" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="authStack" />
+		<!-- global-results> <result name="login" type="redirect">/login.action</result> 
+			</global-results> <action name="home"> <interceptor-ref name="defaultStack" 
+			/> <result type="tiles">login</result> </action> -->
+		<action name="login" class="com.sr.freightops.web.action.LoginAction"
+			method="execute">
+			<interceptor-ref name="defaultStack" />
+			<result name="input" type="tiles">login</result>
+			<result name="success" type="tiles">adminDashboard</result>
+		</action>
+		<action name="logout" class="com.sr.freightops.web.action.LogoutAction"
+			method="execute">
+			<result name="success" type="tiles">logout</result>
+		</action>
+		<action name="userList" class="com.sr.freightops.web.action.UserListAction"
+			method="execute">
+			<result name="success" type="tiles">userList</result>
+		</action>
+		<action name="*Link" method="{1}"
+			class="com.sr.freightops.web.action.LinkAction">
+			<result name="login" type="tiles">login</result>
+			<result name="booking" type="tiles">pageUnavailable</result>
+			<result name="operations" type="tiles">pageUnavailable</result>
+			<result name="documentations" type="tiles">pageUnavailable</result>
+			<result name="reports" type="tiles">pageUnavailable</result>
+			<result name="carrier" type="tiles">pageUnavailable</result>
+			<result name="customer" type="tiles">pageUnavailable</result>
+			<result name="admin" type="tiles">adminDashboard</result>
+			<result name="userList" type="tiles">userList</result>
+			<result name="userCreate" type="tiles">pageUnavailable</result>
+			<result name="groupList" type="tiles">pageUnavailable</result>
+			<result name="groupCreate" type="tiles">pageUnavailable</result>
+			<result name="generalSettingView" type="tiles">pageUnavailable</result>
+			<result name="skinSettingView" type="tiles">pageUnavailable</result>
+			<result name="mailSettingView" type="tiles">pageUnavailable</result>
+			<result name="databaseSettingView" type="tiles">pageUnavailable</result>
+		</action>
+	</package>
+</struts>
